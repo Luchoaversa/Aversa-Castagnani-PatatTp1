@@ -1,0 +1,704 @@
+/* =========================================
+   RESET Y BÁSICOS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+.navbar-black {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('media/fondonegro.png');
+    background-size: cover;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-top {
+    height: 60px;
+    width: auto;
+}
+
+/* =========================================
+   HERO (PC)
+   ========================================= */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('media/fondorojo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 5;
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 450px;
+    margin-bottom: 40px;
+}
+
+.hero-players {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 70%;
+    width: 40%;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.player {
+    height: 100%;
+    width: auto;
+    filter: drop-shadow(10px 5px 20px rgba(0,0,0,0.6));
+    object-fit: contain;
+}
+
+.ortega {
+    margin-right: -80px;
+    z-index: 3;
+}
+
+.palermo {
+    z-index: 2;
+    margin-right: -10px;
+}
+
+/* =========================================
+   SECCIONES COMUNES
+   ========================================= */
+.info-evento, 
+.leyendas, 
+.formaciones {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('media/fondonegro.png');
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.full-design-img {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   CARRUSEL
+   ========================================= */
+.leyendas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#team-selector {
+    background-color: #ff0000 !important; /* Rojo ESPN */
+    color: white !important;
+    
+    /* HACER EL CONTENEDOR MÁS LARGO */
+    padding: 12px 50px 12px 25px !important; /* Más espacio a la derecha para la flecha */
+    min-width: 180px; /* Asegura un largo mínimo para que no quede justo */
+    
+    border: none !important;
+    outline: none !important; /* Quita el resplandor al hacer clic */
+    box-shadow: none !important; /* Quita cualquier sombra */
+    border-radius: 4px;
+    /* FORZAR DESAPARICIÓN DE FLECHA NATIVA */
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+
+    /* INSERTAR FLECHA BLANCA PROPIA */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 15px center !important;
+    background-size: 22px !important;
+
+    transition: all 0.3s ease;
+}
+
+/* 3. ESTILO PARA LAS OPCIONES (EL DESPLEGABLE) */
+#team-selector option {
+    background-color: #050505; /* Fondo oscuro para que contraste con el blanco */
+    color: white;
+    padding: 10px;
+    font-weight: normal;
+}
+
+/* Efecto al pasar el mouse por el selector */
+#team-selector:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Quitar el borde azul feo al hacer clic */
+#team-selector:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.card-img {
+    height: 420px;
+    width: auto;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+#team-selector {
+    background: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+/* =========================================
+   REGISTRO
+   ========================================= */
+.registro {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('media/fondorojo.jpg');
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.registro h2 { 
+    font-size: 2rem; 
+    text-transform: uppercase; 
+    margin-bottom: 50px; /* Aumentamos el espacio para que la caja baje */
+    text-align: center;
+}
+
+.registro-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-container {
+    max-width: 500px;
+    background: rgba(0,0,0,0.8);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container input {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    color: #000;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #ff0000, #990000);
+    color: white;
+    padding: 16px 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer-negro {
+    background-color: #000;
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-main-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espacio entre logos */
+    margin-bottom: 25px;
+}
+
+.footer-espn-logo {
+    height: 45px; /* Recuperamos el tamaño del logo de ESPN */
+    width: auto;
+}
+
+.footer-team-logo {
+    height: 55px; /* Los escudos un poco más grandes */
+    width: auto;
+}
+
+footer {
+    background-color: #000;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.social-container a {
+    background-color: #fff; /* Fondo blanco circular por si el logo es negro */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-container img {
+    width: 22px; /* Tamaño del logo dentro del círculo */
+    height: auto;
+    /* Si el logo es negro y querés que el círculo sea negro, 
+       usá filter: invert(1) y poné el background del "a" en transparente */
+}
+
+/* Efecto al pasar el mouse */
+.social-container a:hover {
+    transform: scale(1.15);
+    background-color: #ff0000; /* Color ESPN al pasar el mouse */
+}
+
+/* Efecto hover para las redes */
+.social-container img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%) brightness(1); /* Cobran color al pasar el mouse */
+}
+
+/* =========================================
+   MODAL
+   ========================================= */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #aa1111 url('media/fondorojo.jpg');
+    background-size: cover;
+    max-width: 700px;
+    width: 100%;
+    padding: 50px 40px 0 40px; /* 0 abajo para que el logo pegue al borde */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#titulo-gracias {
+    margin-bottom: 30px; /* Espacio para que la caja blanca baje más */
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.modal-body {
+    background: rgba(255,255,255,0.9);
+    color: #1a1a1a;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-volver {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 40px auto; /* Margen abajo para no pegar al logo */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Logo pegado abajo con fondo negro opaco */
+.modal-footer-logo {
+    padding: 20px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('media/fondonegro.png');
+    background-size: cover;
+    width: calc(100% + 80px); /* Ajuste para cubrir todo el ancho */
+    margin-left: -40px;
+    margin-top: auto; /* Empuja hacia abajo del todo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-footer-logo img {
+    height: 35px;
+    width: auto;
+}
+
+.btn-primary, .btn-volver, .hero-button-container .btn-primary {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Importante para que el transform funcione bien */
+    cursor: pointer;
+}
+
+/* EFECTO HOVER: Se activa al pasar el mouse */
+.btn-primary:hover, .btn-volver:hover, .hero-button-container .btn-primary:hover {
+    transform: scale(1.08); /* Crece un 8% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Le da un poco de profundidad al subir */
+}
+
+/* Efecto opcional para cuando hacen clic (se hunde un poquito) */
+.btn-primary:active, .btn-volver:active {
+    transform: scale(0.95);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+.contenedor-solo-pc { display: block; }
+.contenedor-solo-movil { display: none; }
+
+@media (max-width: 768px) {
+    .contenedor-solo-pc { display: none !important; }
+    .contenedor-solo-movil { display: block !important; }
+    .card-img {
+        height: 300px; /* Bajamos de 420px a 300px para que no ocupen tanto alto */
+        width: auto;
+        border-radius: 10px;
+    }
+
+    /* 2. SUBIR LA SECCIÓN FORMACIONES */
+    /* Reducimos el padding de las secciones para que estén más juntas */
+    .formaciones {
+        padding-top: 40px !important; /* Menos espacio arriba para que suba */
+        padding-bottom: 40px !important;
+    }
+
+    /* También podemos reducir el espacio inferior de la sección anterior (Leyendas) */
+    .leyendas {
+        padding-bottom: 20px !important;
+    }
+
+    /* 3. CENTRAR TÍTULOS (Refuerzo) */
+    .formaciones h2, .leyendas h2 {
+        text-align: center;
+        margin-bottom: 25px; /* Menos margen inferior para que el contenido suba */
+    }
+
+    /* Ajuste para que la cancha no quede tan pegada al título de formaciones */
+    .contenedor-solo-movil {
+        margin-top: 10px;
+    }
+
+    .contenedor-solo-pc {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 2. Mostramos la de móvil PERO LA ACHICAMOS */
+    .contenedor-solo-movil {
+        display: block !important;
+        /* AQUÍ ESTÁ EL CAMBIO PRINCIPAL: */
+        max-width: 65% !important; /* Probá con este valor (ej: 65%). Si la querés más chica, bajalo. */
+        width: auto !important;
+        height: auto !important;
+        margin: 0 auto !important; /* Centrado horizontal */
+    }
+
+    h2 {
+        text-align: center !important;
+        font-size: 1.8rem;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    /* 2. DISEÑO DEL SELECTOR PARA MÓVIL (Carrusel) */
+    .leyendas-header {
+        flex-direction: column; /* Apila el título y el selector */
+        gap: 20px;
+        align-items: center;
+    }
+
+    #team-selector {
+        width: 80%; /* Más ancho para que sea fácil de tocar */
+        height: 50px;
+        background-color: #1a1a1a;
+        border: 2px solid #ff0000; /* Color de acento para que resalte */
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        appearance: none; /* Quita el diseño por defecto de algunos navegadores */
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 20px;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        transition: none !important;
+        outline: none !important;
+    }
+
+   #team-selector option {
+        font-size: 16px !important; /* Tamaño estándar para que no se vea gigante */
+        padding: 10px !important;
+        background-color: #000000 !important;
+        color: #fffefe !important;
+    }
+
+    
+    /* 3. AJUSTE DE IMÁGENES (Para que todo esté centrado) */
+    .diseno-alineado-inicio, 
+    .diseno-centrado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .full-design-img.contenedor-solo-movil {
+        max-width: 85%; /* Achicamos un poco como pediste antes */
+        margin: 0 auto !important;
+    }
+
+    /* Ajuste extra para el carrusel en móvil */
+    .carousel {
+        padding-left: 20px; /* Para que la primera foto no pegue al borde */
+    }
+
+    
+    .card-img, 
+    .full-design-img,
+    .contenedor-solo-movil img {
+        /* 1. Quitamos TODOS los filtros y optimizaciones que pueden estar chocando */
+        image-rendering: auto; 
+        filter: none !important;
+        -webkit-filter: none !important;
+
+        /* 2. El truco real: Escalar la imagen a un valor par */
+        /* Muchas veces el empañado es porque la imagen mide, por ejemplo, 320.5px */
+        width: 320px; 
+        height: auto;
+        margin: 0 auto;
+        display: block;
+
+        /* 3. Evitamos el suavizado de la GPU */
+        transform: none !important;
+        
+        /* 4. Forzamos la opacidad al máximo por si algo la está lavando */
+        opacity: 1 !important;
+    }
+
+    /* Ajuste para la imagen de la formación */
+    .full-design-img, .contenedor-solo-movil img {
+        width: 90%; /* Que no sea el 100% para que tenga aire a los costados */
+        max-width: 350px; /* Evita que se agrande de más en pantallas anchas */
+        height: auto;
+        margin: 0 auto;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    .footer-main-logos {
+        gap: 20px;
+    }
+    .footer-espn-logo {
+        height: 30px;
+    }
+    .footer-team-logo {
+        height: 40px;
+    }
+
+  .hero {
+        flex-direction: column;
+        padding-top: 100px; /* Más espacio arriba para que el logo de la nav no tape el h1 */
+        padding-bottom: 0px;
+        text-align: center;
+        height: auto; /* Cambiamos 100vh por auto para que crezca según el contenido */
+        min-height: 100vh;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* Tamaño ajustado para legibilidad */
+        text-align: center;
+        margin-bottom: 50px; /* Espacio exacto para que el subtítulo flote */
+        width: 100%;
+        display: block;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        /* Ajuste de posición: sube sin desalinearse */
+        margin-top: -25px; 
+        margin-bottom: 55px;
+        
+        /* Ajuste de ancho: evita que se pase de largo */
+        max-width: 90%; 
+        margin-left: auto;
+        margin-right: auto;
+        
+        /* Alineación de texto */
+        text-align: center;
+        line-height: 1.4;
+        padding: 0 15px; /* Margen interno de seguridad */
+    }
+
+    .hero-button-container {
+        /* Refuerzo para separar el botón del texto de arriba */
+        margin-top: 20px; 
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-players {
+        position: relative;
+        width: 100%;
+        height: 350px; /* Ajustá el alto según cuánto espacio quieras que ocupen */
+        margin-top: 20px;
+        display: block; /* Cambiamos de flex a block para usar posiciones absolutas */
+        overflow: visible;
+    }
+
+    .player {
+        position: absolute;
+        bottom: 0; /* Los pega a la base de la sección roja */
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* PEGA A PALERMO A LA IZQUIERDA */
+    .palermo {
+        left: -20px; /* Un pequeño margen negativo para que "salga" un poquito del borde si querés */
+        z-index: 2;
+    }
+
+    /* PEGA A ORTEGA A LA DERECHA */
+    .ortega {
+        right: 20px; /* Lo mismo aquí, pegado al borde derecho */
+        z-index: 3;
+    }
+
+   .social-container {
+        display: grid;
+        grid-template-columns: repeat(2, 50px); /* Crea 2 columnas fijas */
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .social-container a {
+        width: 50px; /* Un poco más grandes para que sea fácil tocarlos */
+        height: 50px;
+    }
+
+    .social-container img {
+        width: 26px;
+    }
+
+
+    .flip-container {
+        perspective: 1000px;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .flip-card-front, .flip-card-back {
+        width: 100%;
+        backface-visibility: hidden; /* Esto evita que se mezclen las imágenes al girar */
+        -webkit-backface-visibility: hidden;
+    }
+
+    .flip-card-inner {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .is-flipped { transform: rotateY(180deg); }
+    .flip-card-back { position: absolute; top: 0; left: 0; transform: rotateY(180deg); }
+}
